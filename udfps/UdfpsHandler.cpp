@@ -167,6 +167,7 @@ class XiaomiSm6225UdfpsHander : public UdfpsHandler {
     void onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/, float /*major*/) {
         LOG(INFO) << __func__;
 
+        // Ensure touchscreen is aware of the press state, ideally this is not needed
         setFingerDown(true);
     }
 
