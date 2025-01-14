@@ -14,6 +14,13 @@ $(call inherit-product, device/xiaomi/sapphire/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Include our private certificate
+-include vendor/lineage-priv/keys/keys.mk
+
+# Device configs
+TARGET_BOOT_ANIMATION_RES = 1080
+TARGET_HAS_UDFPS := true
+
 PRODUCT_NAME := lineage_sapphire
 PRODUCT_DEVICE := sapphire
 PRODUCT_MANUFACTURER := Xiaomi
@@ -22,19 +29,6 @@ PRODUCT_MODEL := Redmi Note 13
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Device configs
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-TARGET_HAS_UDFPS := true
-WITH_GMS := true
-
-# Matrixx
-BUILD_GOOGLE_MESSAGE := true
-MATRIXX_BUILD_TYPE := Official
-MATRIXX_MAINTAINER := artemscine
-MATRIXX_CHIPSET := SM6225
-MATRIXX_BATTERY := 5000mAh
-MATRIXX_DISPLAY := 1080X2400
-TARGET_EXCLUDES_AUDIOFX := true
-TARGET_EXCLUDES_AUXIO := true
-TARGET_EXCLUDES_VIA := true
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="sapphire_global-user 15 AQ3A.240829.003 OS2.0.5.0.VNGMIXM release-keys" \
+    BuildFingerprint=Redmi/sapphire_global/sapphire:15/AQ3A.240829.003/OS2.0.5.0.VNGMIXM:user/release-keys
