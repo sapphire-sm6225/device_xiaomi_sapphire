@@ -69,6 +69,9 @@ PRODUCT_PACKAGES += \
     libbatterylistener \
     libhfp_pal
 
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 AUDIO_HAL_DIR := hardware/qcom-caf/sm6225/audio/primary-hal
 
 PRODUCT_COPY_FILES += \
