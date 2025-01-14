@@ -266,6 +266,7 @@ debug.renderengine.backend=skiaglthreaded
 renderthread.skia.reduceopstasksplitting=true
 persist.sys.sf.native_mode=2
 debug.sf.defer_refresh_rate_when_off=1
+ro.surface_flinger.support_kernel_idle_timer=true
 
 # Keystore
 ro.hardware.keystore_desede=true
