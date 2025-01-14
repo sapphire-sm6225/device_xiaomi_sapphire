@@ -105,7 +105,7 @@ void vendor_load_properties() {
     struct sysinfo sys;
     sysinfo(&sys);
 
-    if (sys.totalram > 8192ull * 1024 * 1024) {
+    if (sys.totalram > 6144ull * 1024 * 1024) {
         // from - phone-xhdpi-8192-dalvik-heap.mk
         heapstartsize = "16m";
         heapgrowthlimit = "512m";
@@ -113,7 +113,7 @@ void vendor_load_properties() {
         heaptargetutilization = "0.75";
         heapminfree = "2m";
         heapmaxfree = "16m";
-    } else if (sys.totalram > 6144ull * 1024 * 1024) {
+    } else if (sys.totalram > 4096ull * 1024 * 1024) {
         // from - phone-xhdpi-6144-dalvik-heap.mk
         heapstartsize = "12m";
         heapgrowthlimit = "384m";
