@@ -441,6 +441,7 @@ PRODUCT_PACKAGES += \
     
 # Device overlays
 PRODUCT_PACKAGES += \
+    ApertureResSapphire \
     FrameworksResSapphire \
     SettingsProviderResSapphire \
     SettingsResSapphire \
