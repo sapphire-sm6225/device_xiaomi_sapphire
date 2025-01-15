@@ -646,6 +646,3 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/xiaomi/sapphire/sapphire-vendor.mk)
-
-# Call the MiuiCamera setup
-$(call inherit-product-if-exists, device/xiaomi/miuicamera-sapphire/device.mk)
